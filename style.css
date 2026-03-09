@@ -1,0 +1,42 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: #f0f4f8;
+  padding: 20px;
+  direction: rtl;
+  color: #333;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+.container:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+h2 { text-align: center; margin-bottom: 25px; color: #222; }
+label { display:block; margin-top:18px; font-weight:600; font-size:1.1em; color:#444; }
+select, input[type="text"], input[type="password"], textarea {
+  width: 100%; padding:10px 14px; margin-top:8px; border:1px solid #bbb; border-radius:6px; font-size:1em;
+  transition:border-color 0.3s ease; box-sizing:border-box;
+}
+select:focus, input[type="text"]:focus, textarea:focus, input[type="password"]:focus {
+  border-color:#007bff; outline:none; box-shadow:0 0 6px rgba(0,123,255,0.3);
+}
+.options-container { margin-top:15px; }
+.option-input { display:flex; margin-top:12px; gap:8px; }
+.option-input input[type="text"] { flex:1; font-size:1em; padding:8px 12px; }
+.option-input button {
+  background:#e55353; color:white; border:none; cursor:pointer; padding:0 14px; border-radius:6px; font-weight:600;
+  transition:background 0.25s ease;
+}
+.option-input button:hover { background:#c44141; }
+button#addOptionBtn, button#sendQuestionBtn, button.vote-btn, #verifyKeyBtn {
+  margin-top:12px; font-weight:700; border-radius:8px; cursor:pointer; padding:10px 16px; color:white; border:none; transition:all 0.3s ease;
+}
+#verifyKeyBtn { background:#17a2b8; } #verifyKeyBtn:hover { background:#117a8b; }
+button#addOptionBtn { background:#007bff; } button#addOptionBtn:hover { background:#0056b3; }
+button#sendQuestionBtn { background:#28a745; width:100%; font-size:1.2em; } button#sendQuestionBtn:hover { background:#1e7e34; }
+.vote-btn { background:#007bff; margin-top:12px; padding:8px 16px; } .vote-btn:hover { background:#0056b3; }
+.question-display, .responses { margin-top:30px; padding-top:20px; border-top:3px solid #eee; }

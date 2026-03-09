@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>استطلاع آمن للطلاب</title>
+
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>استطلاع رأي الطلاب - آمن</h2>
+
+  <!-- مفتاح الأمان عند فتح الواجهة فقط -->
+  <div id="securityDiv">
+    <label for="securityKey">مفتاح الأمان:</label>
+    <input type="password" id="securityKey" placeholder="ادخل مفتاح الأمان">
+    <button id="verifyKeyBtn" type="button">تحقق من المفتاح</button>
+  </div>
+
+  <!-- نموذج الأسئلة يظهر بعد التحقق -->
+  <div id="questionForm" style="display:none; margin-top: 20px;">
+    <label for="questionType">اختر نوع السؤال:</label>
+    <select id="questionType">
+      <option value="text">نص مفتوح</option>
+      <option value="multiple">اختيار من متعدد</option>
+      <option value="yesno">نعم / لا</option>
+      <option value="vote">تصويت</option>
+    </select>
+
+    <label for="questionText">السؤال:</label>
+    <textarea id="questionText" rows="2" placeholder="اكتب السؤال هنا"></textarea>
+
+    <div id="optionsSection" style="display:none;">
+      <label>الخيارات:</label>
+      <div id="optionsContainer" class="options-container"></div>
+      <button id="addOptionBtn" type="button">إضافة خيار</button>
+    </div>
+
+    <button id="sendQuestionBtn" type="button">إرسال السؤال</button>
+  </div>
+
+  <div class="question-display" id="questionDisplay" style="display:none;">
+    <h3>السؤال:</h3>
+    <p id="displayedQuestion"></p>
+    <div id="answerSection"></div>
+  </div>
+
+  <div class="responses" id="responsesSection" style="display:none;">
+    <h3>الإحصائيات:</h3>
+    <div id="responsesStats"></div>
+    <canvas id="responsesChart" style="max-width: 500px; margin: 20px auto;"></canvas>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
